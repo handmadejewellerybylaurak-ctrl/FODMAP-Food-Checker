@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FODMAP Food Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FODMAP Food Database</h1>
+        
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search foods..." 
+                class="search-input"
+            >
+            <button id="clearBtn" class="clear-btn">Clear</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="foodTable" class="food-table">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>FODMAP Level</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalFoodName"></h2>
+                <p><strong>FODMAP Level:</strong> <span id="modalFodmap"></span></p>
+                <p><strong>Food Category:</strong> <span id="modalCategory"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
